@@ -1,12 +1,16 @@
 # Brazil-Memory-Game
 
-This is my unit1 project. I have decided to do a memory game with pictures of my favorites spots in Brazil (my home country).
----
 ## Elevator pitch
 
 The game starts with 10 "squares" that shows the same picture, once you click on one of the squares a picture of one of my favorites spots in Brazil will show. There will be 5 different beautiful spots total. Once you see the picture you will click on a second picture, the goal is to find the pair of the first picture you clicked on. If you both of the pictures are the same they will stay showing on the browser, otherwise you will click on a button that will turn them back to their "plain stage". You will alternate turns with a second player (a firend of yours or family member) and your goal is to find all of the pairs. This game will test your memory and hopefully will make you want to visit my country.
 
 ---
+## Wireframe:
+
+![1](https://user-images.githubusercontent.com/117694604/204959235-537c7872-3081-4328-bafc-0555f8c438d1.jpg)
+
+![2](https://user-images.githubusercontent.com/117694604/204959311-40dcedb5-a0c1-41ff-b837-31039f8fc66f.jpg)
+
 
 ## Tech stack:
 
