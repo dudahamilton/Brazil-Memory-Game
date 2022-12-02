@@ -9,15 +9,27 @@
 /* Initial/basic look */
 
 
-.container {
+.first-container {
     display: flex;
     justify-content: center;   
 }
-.container div{
+ .first-container div{
     background-color: aqua;
     width: 150px;
     height: 150px;
     border: solid 1px black;
     margin: 10px;
-    
 }
+
+.second-container {
+    display: flex;
+    justify-content: center;   
+}
+ .second-container div{
+    background-color: aqua;
+    width: 150px;
+    height: 150px;
+    border: solid 1px black;
+    margin: 10px;
+}
+
