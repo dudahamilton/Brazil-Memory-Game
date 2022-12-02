@@ -2,7 +2,7 @@
 
 ## Elevator pitch
 
-The game starts with 10 "squares" that shows the same picture, once you click on one of the squares a picture of one of my favorites spots in Brazil will show. There will be 5 different beautiful spots total. Once you see the picture you will click on a second picture, the goal is to find the pair of the first picture you clicked on. If you both of the pictures are the same they will stay showing on the browser, otherwise you will click on a button that will turn them back to their "plain stage". You will alternate turns with a second player (a firend of yours or family member) and your goal is to find all of the pairs. This game will test your memory and hopefully will make you want to visit my country.
+The game starts with 10 "squares" that shows the same picture, once you click on one of the squares a picture of one of my favorites spots in Brazil will show. There will be 5 different beautiful spots total. Once you see the picture you will click on a second picture, the goal is to find the pair of the first picture you clicked on. If both of the pictures are the same they will stay showing on the browser, otherwise you will click on a button that will turn them back to their "plain stage". You will alternate turns with a second player (a friend of yours or family member) and your goal is to find all of the pairs. This game will test your memory and hopefully will make you want to visit my country.
 
 ---
 ## Wireframe:
