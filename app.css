@@ -1,3 +1,23 @@
-h1 {
-    color: blue;
+/* Goals
+-h1 with a cool font
+-each picture when in plain mode shows Brazil's map
+- Have nice looking buttons
+-background music (have no idea how to do that (go to saturday office hours)
+-display a cool winning message
+
+ */
+/* Initial/basic look */
+
+
+.container {
+    display: flex;
+    justify-content: center;   
+}
+.container div{
+    background-color: aqua;
+    width: 150px;
+    height: 150px;
+    border: solid 1px black;
+    margin: 10px;
+    
 }
