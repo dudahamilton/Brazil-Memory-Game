@@ -11,11 +11,34 @@
  9- display winning message*/
 
 function flipImg() {
-    let image_click = document.getElementById('pic1')
-    if (image_click.src.match('brazil.jpg')){
-        image_click.src = "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/43/ac/8f/pelourinho.jpg?w=1200&h=-1&s=1"
+    let imageClick = document.getElementById('pic1')
+    if (imageClick.src.match('brazil.jpg')){
+        imageClick.src = "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/43/ac/8f/pelourinho.jpg?w=1200&h=-1&s=1"
     } else{
-        image_click.src = 'brazil.jpg'
+        imageClick.src = 'brazil.jpg'
     }
 }
 
+function flipImg2() {
+    let imageClick = document.getElementById('pic2')
+    if (imageClick.src.match('brazil.jpg')){
+        imageClick.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe44SuPVamIj0yVSNv6KQkV0YXcSnEyVXo4w&usqp=CAU"
+    } else{
+        imageClick.src = 'brazil.jpg'
+    }
+}
+
+ function flipImg3() {
+    let imageClick = document.getElementById('pic3')
+    if (imageClick.src.match('brazil.jpg')){
+        imageClick.src = "https://www.traveller.com.au/content/dam/images/h/1/q/d/y/0/image.related.articleLeadwide.620x349.h1qdxw.png/1598825371635.jpg"
+    } else{
+        imageClick.src = 'brazil.jpg'
+    }
+}
+
+
+/* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3QBHXWOLqJzAD3Qn9SLviVdexUFJCNnfiWw&usqp=CAU" */
+
+
+/* "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY_vZt65OuTgT6kjMhKEYNwGXoxj3or2AcVA&usqp=CAU" */
