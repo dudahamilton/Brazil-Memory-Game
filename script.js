@@ -59,7 +59,7 @@ function flipImg5() {
 function flipImg6() {
     let imageClick = document.getElementById('pic6')
     if (imageClick.src.match('brazil.jpg')){
-        imageClick.src = "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/43/ac/8f/pelourinho.jpg?w=1200&h=-1&s=1"
+        imageClick.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY_vZt65OuTgT6kjMhKEYNwGXoxj3or2AcVA&usqp=CAU"
     } else{
         imageClick.src = 'brazil.jpg'
     }
@@ -68,7 +68,7 @@ function flipImg6() {
 function flipImg7() {
     let imageClick = document.getElementById('pic7')
     if (imageClick.src.match('brazil.jpg')){
-        imageClick.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe44SuPVamIj0yVSNv6KQkV0YXcSnEyVXo4w&usqp=CAU"
+        imageClick.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3QBHXWOLqJzAD3Qn9SLviVdexUFJCNnfiWw&usqp=CAU"
     } else{
         imageClick.src = 'brazil.jpg'
     }
@@ -85,7 +85,7 @@ function flipImg8() {
 function flipImg9() {
     let imageClick = document.getElementById('pic9')
     if (imageClick.src.match('brazil.jpg')){
-        imageClick.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3QBHXWOLqJzAD3Qn9SLviVdexUFJCNnfiWw&usqp=CAU"
+        imageClick.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe44SuPVamIj0yVSNv6KQkV0YXcSnEyVXo4w&usqp=CAU"
     } else{
         imageClick.src = 'brazil.jpg'
     }
@@ -94,7 +94,7 @@ function flipImg9() {
 function flipImg10() {
     let imageClick = document.getElementById('pic10')
     if (imageClick.src.match('brazil.jpg')){
-        imageClick.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY_vZt65OuTgT6kjMhKEYNwGXoxj3or2AcVA&usqp=CAU"
+        imageClick.src = "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/43/ac/8f/pelourinho.jpg?w=1200&h=-1&s=1"
     } else{
         imageClick.src = 'brazil.jpg'
     }
@@ -104,5 +104,5 @@ function flipImg10() {
 // restart button
 
 function restartGame(){
-    
+
 }
