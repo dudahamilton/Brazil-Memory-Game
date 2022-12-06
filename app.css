@@ -8,8 +8,13 @@
  */
 /* Initial/basic look */
 
+#game-container{
+    margin: 30px auto 0;
+    width: 300px;
+}
 
-.first-container {
+
+/* .first-container {
     display: flex;
     justify-content: center;   
 }
@@ -37,4 +42,4 @@ img {
     height: 200px;
     margin: 10px;
 }
-
+ */
