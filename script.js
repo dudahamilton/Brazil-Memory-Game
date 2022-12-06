@@ -14,15 +14,9 @@
 
 
     
-const gameActive = (function(){
+const memoryGame = (function(){
     // grabbing the game container from html
     const container = document.getElementById('game-container');
-    // stablishing number of rows and columns inside the big container
-    const row = 2;
-    const column = 5;
-    // devinding the space of the container between the images boxes
-    const boxWidth = container.offsetWidth /column;
-    const boxHeight = container.offsetHeight / row;
     // array holding the images 
     let cardArray = [ 
         { city: "salvador", img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/43/ac/8f/pelourinho.jpg?w=1200&h=-1&s=1", },
@@ -36,8 +30,51 @@ const gameActive = (function(){
         { city: "jalapao", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY_vZt65OuTgT6kjMhKEYNwGXoxj3or2AcVA&usqp=CAU", },
         { city: "jalapao", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY_vZt65OuTgT6kjMhKEYNwGXoxj3or2AcVA&usqp=CAU", },
         ];
-    
-    
+        
+        const boxes= [];
+        let preeviousBoxIndex = null; //the last clicked img. starts as null but changes with the game
+        let gameActive = false; // if game is still active
+
+
+        // Creating the grid
+        const grid = document.createElement('div');
+        grid.classList.add("grid")
+        container.appendChild(grid) // making the new div a child of the container div
+        
+
+
+        // Creating the boxes inside the grid
+
+         // stablishing number of rows and columns inside the gridr
+        const row = 2;
+        const column = 5;
+        // devinding the space of the container between the images boxes
+        const boxWidth = container.offsetWidth /column;
+        const boxHeight = container.offsetHeight / row;
+
+        for (let i = 0; i < row*column; i +=2) {
+            const image = randomImage();
+
+            for (let j = 0; j < 2; j++){
+                currentBoxIndex = i + j;
+                const boxElement = document.createElement("div");
+                boxElement.innerText = image;
+                boxElement.classList.add('cell');
+                boxElement.style.width = (100 /column) + '%'
+            const box = {
+                image: image,
+                element: boxElement,
+                isAMatch: false
+            }
+
+            // hiding the images that do not match after a few seconds
+            setTimeout(() => {
+                boxElement.classList.add("hide");
+            }, randomImg());
+        
+
+            }
+        }
 
 }
 
