@@ -137,7 +137,8 @@ function resetButton(){
     document.getElementById('title').textContent = 'Memory Game'
 // .cards unflip all cards
     cards.forEach(card => card.classList.remove('flip'));
-// reset button is still buggy
+// making the cards clickable again
+    cards.forEach(card => card.addEventListener('click', flipCard));
 }
 
 /* to do:
