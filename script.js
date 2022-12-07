@@ -89,15 +89,34 @@ function unflipCards(){
        }, 1500);
 }
 
-function loseTimer(){
+/* function loseTimer(){
     setTimeout(() => {
        /*  cards.forEach(card => {
             card.removeEventListener;
         }) */
-        console.log("you lose")
+        /* console.log("you lose")
        }, 30000);
 }
+let timeOut = setTimeout(function(){
+    //console.log(``)
+}, 5000)
+setInterval(function(){
+    console.log(`time left ${timeOut}`)
+}, 1000)
+ */ 
 
+let timer = 5000
+function setTimer() {
+	myStopFunction()
+	console.log(timer)
+	timer -= 1000
+}
+let timeLeft = setInterval(setTimer, 1000)
+function myStopFunction() {
+	if (timer <= 0) {
+		clearInterval(timeLeft)
+	}
+}
 function restartBoard() {
     [cardFlipped, boardLock] = [false, false];
     [firstCard, secondCard] = [null, null];

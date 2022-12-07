@@ -42,3 +42,8 @@ The game starts with 10 "squares" that shows the same picture, once you click on
 ## Potential roadblocks:
 
 I believe that showing the picture and then hiding it will be hard, keeping track of how many pairs each player found will also be difficult.
+
+## References:
+MDN 
+Colt Steele udemy course (The web Developer Bootcamp)
+Code Sketch: https://www.youtube.com/watch?v=eMhiMsEC9Uk&list=PLLX1I3KXZ-YH-woTgiCfONMya39-Ty8qw&index=1
