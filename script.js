@@ -89,6 +89,15 @@ function unflipCards(){
        }, 1500);
 }
 
+function loseTimer(){
+    setTimeout(() => {
+       /*  cards.forEach(card => {
+            card.removeEventListener;
+        }) */
+        console.log("you lose")
+       }, 30000);
+}
+
 function restartBoard() {
     [cardFlipped, boardLock] = [false, false];
     [firstCard, secondCard] = [null, null];
@@ -105,10 +114,10 @@ function winner (){
  // add eventListener to restart button
 function resetButton(){
 // assigning the scores back to 0
-    playerOneScore = 0
-    playerTwoScore = 0
+    counter = 0;
+    document.getElementById('title').textContent = 'Memory Game'
 // .cards unflip all cards
-    cards.forEach(card => card.remove('flip'));
+    cards.forEach(card => card.classList.remove('flip'));
 
 }
 
