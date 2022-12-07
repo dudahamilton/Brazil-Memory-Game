@@ -33,6 +33,8 @@
        secondCard = this;
        //console.log(cardFlipped, secondCard)
    }
+
+   // time to check if cards match
   }
  // adding event listener to every card
  cards.forEach(card => card.addEventListener('click', flipCard));
