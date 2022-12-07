@@ -76,6 +76,12 @@ const memoryGame = (function(){
             }
         }
 
+        // DOM
+        for (let i = 0; i < boxes.length; i++){
+            boxes[i].element.addEventListener('click', () => {boxClick(i) });
+            grid.appendChild(boxes[i].element);
+            gameActive = true;
+        }
 }
 
 )
