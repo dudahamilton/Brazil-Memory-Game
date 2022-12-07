@@ -32,8 +32,6 @@ body{
     transform-style: preserve-3d;
     transition: transform.5s;
     margin: 5px;
-    
-
 }
 .card.flip{
     transform: rotateY(180deg);

@@ -12,15 +12,30 @@
 
  // Flipping images (is away too repetitive ask for help)*/
 
- // selecting every card
- const cards = document.querySelectorAll('.card');
+
+// Assigning variables for later use:
 
  let cardFlipped = false;
  let boardLock = false; // the user clicks on another card before the card finish flipping thw logic will break, this will prevent that from happening
  let firstCard, secondCard;
+ //let playerOne = true
+ //let player
+ let counter = 0;
+
+// DOM:
+
+ // selecting every card
+ const cards = document.querySelectorAll('.card');
 
  // adding event listener to every card
  cards.forEach(card => card.addEventListener('click', flipCard));
+
+ // selecting restart button
+ const reset = document.querySelector('.restart');
+ //adding event listener to restart button
+ reset.addEventListener('click', resetButton);
+
+//Functions;
 
 // function that flips the card once clicked
  function flipCard() {
@@ -42,12 +57,16 @@
        //console.log(secondCard.dataset.city)
        isAMatch();
   }
+  //switch player
 }
   function isAMatch(){
      // time to check if cards match
      if (firstCard.dataset.city === secondCard.dataset.city){
         // it's a match remove event listener
         turnCardsOff()
+        counter++
+        console.log(counter)
+        winner()
     } else{
         // it's not a match
         unflipCards()
@@ -73,11 +92,38 @@ function unflipCards(){
 function restartBoard() {
     [cardFlipped, boardLock] = [false, false];
     [firstCard, secondCard] = [null, null];
-    //if thr user clicks twice in the same card it will turn the eventLsitener off. this will prevent that to happen.
+    //if thr user clicks twice in the same card it will turn the eventLsitener off. this will prevent that from happening.
   }
 
+function winner (){
+    if(counter === 5){
+        document.getElementById('title').textContent = 'You win!!'
+    }
+}
 
- 
+
+ // add eventListener to restart button
 function resetButton(){
+// assigning the scores back to 0
+    playerOneScore = 0
+    playerTwoScore = 0
+// .cards unflip all cards
+    cards.forEach(card => card.remove('flip'));
 
 }
+
+/* to do:
+reset button
+instructions button
+add players and switch between them
+winning conditions
+track of pairs
+winning message
+shuffle
+add 10 more pics (maybe)
+add references to read me */
+
+/* playerOneTurn = true
+playerOneTurn= false (inside secondCard)
+if (playerOneTurn = false){
+    playerTwoTurn = true)*/
