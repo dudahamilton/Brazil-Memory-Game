@@ -16,25 +16,68 @@
  const cards = document.querySelectorAll('.card');
 
  let cardFlipped = false;
+ let boardLock = false; // the user clicks on another card before the card finish flipping thw logic will break, this will prevent that from happening
  let firstCard, secondCard;
+
+ // adding event listener to every card
+ cards.forEach(card => card.addEventListener('click', flipCard));
 
 // function that flips the card once clicked
  function flipCard() {
+     if(boardLock) return;
+     if (this === firstCard) return; //if thr user clicks twice in the same card it will turn the eventLsitener off. this will prevent that to happen.
+
     //console.log("I was clicked")
    // console.log(this) refers to flipcard
-   this.classList.add('flip');
-   if(!cardFlipped){
+    this.classList.add('flip');
+    if(!cardFlipped){
        // first time player clicked a card
        cardFlipped = true;
        firstCard = this;
        //console.log(cardFlipped, firstCard)
-   } else {
-       cardFlipped = false;
+}   else {
        secondCard = this;
        //console.log(cardFlipped, secondCard)
-   }
-
-   // time to check if cards match
+       //console.log(firstCard.dataset.city);
+       //console.log(secondCard.dataset.city)
+       isAMatch();
   }
- // adding event listener to every card
- cards.forEach(card => card.addEventListener('click', flipCard));
+}
+  function isAMatch(){
+     // time to check if cards match
+     if (firstCard.dataset.city === secondCard.dataset.city){
+        // it's a match remove event listener
+        turnCardsOff()
+    } else{
+        // it's not a match
+        unflipCards()
+    }
+  //console.log('inside the function')
+}
+
+function turnCardsOff(){
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard)
+    restartBoard();
+}
+
+function unflipCards(){
+    boardLock = true;
+    setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+        restartBoard();
+       }, 1500);
+}
+
+function restartBoard() {
+    [cardFlipped, boardLock] = [false, false];
+    [firstCard, secondCard] = [null, null];
+    //if thr user clicks twice in the same card it will turn the eventLsitener off. this will prevent that to happen.
+  }
+
+
+ 
+function resetButton(){
+
+}
