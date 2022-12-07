@@ -89,22 +89,7 @@ function unflipCards(){
        }, 1500);
 }
 
-/* function loseTimer(){
-    setTimeout(() => {
-       /*  cards.forEach(card => {
-            card.removeEventListener;
-        }) */
-        /* console.log("you lose")
-       }, 30000);
-}
-let timeOut = setTimeout(function(){
-    //console.log(``)
-}, 5000)
-setInterval(function(){
-    console.log(`time left ${timeOut}`)
-}, 1000)
- */ 
-
+// Setting timer of the game
 let timer = 5000
 function setTimer() {
 	myStopFunction()
@@ -114,9 +99,12 @@ function setTimer() {
 let timeLeft = setInterval(setTimer, 1000)
 function myStopFunction() {
 	if (timer <= 0) {
-		clearInterval(timeLeft)
-	}
+		clearInterval(timeLeft);
+        cards.forEach(card => card.removeEventListener('click', flipCard));
+	} 
 }
+
+// fixing bugs
 function restartBoard() {
     [cardFlipped, boardLock] = [false, false];
     [firstCard, secondCard] = [null, null];
@@ -133,6 +121,7 @@ function winner (){
  // add eventListener to restart button
 function resetButton(){
 // assigning the scores back to 0
+    timer = 5000;
     counter = 0;
     document.getElementById('title').textContent = 'Memory Game'
 // .cards unflip all cards
