@@ -16,3 +16,23 @@ body{
     height: 100vh;
     background-color: blue;
 }
+.memory-game{
+    display: flex;
+    border: 2px solid lime;
+    flex-wrap: wrap;
+}
+.card{
+    border: 2px solid aqua;
+    width: 200px;
+    height: 200px;
+    position:relative;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.front, .back{
+    position:absolute;
+}
