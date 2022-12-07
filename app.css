@@ -17,20 +17,20 @@ body{
     display: flex;
 }
 .memory-game{
-    width: 800px;
-    height: 800px;
+    width: 1000px;
+    height: 900px;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
     perspective: 1000px;
 }
 .card{
-    border: px solid rgb(25, 168, 37);
     width: 200px;
     height: 200px;
     position:relative;
     transform-style: preserve-3d;
     transition: transform.5s;
+    margin: 20px;
     
 
 }

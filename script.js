@@ -14,11 +14,25 @@
 
  // selecting every card
  const cards = document.querySelectorAll('.card');
+
+ let cardFlipped = false;
+ let firstCard, secondCard;
+
 // function that flips the card once clicked
-function flipCard() {
+ function flipCard() {
     //console.log("I was clicked")
-   // console.log(this)
-   this.classList.toggle('flip');
+   // console.log(this) refers to flipcard
+   this.classList.add('flip');
+   if(!cardFlipped){
+       // first time player clicked a card
+       cardFlipped = true;
+       firstCard = this;
+       //console.log(cardFlipped, firstCard)
+   } else {
+       cardFlipped = false;
+       secondCard = this;
+       //console.log(cardFlipped, secondCard)
+   }
   }
  // adding event listener to every card
  cards.forEach(card => card.addEventListener('click', flipCard));
