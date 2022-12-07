@@ -14,18 +14,28 @@
 }
 body{
     height: 100vh;
-    background-color: blue;
+    display: flex;
 }
 .memory-game{
+    width: 800px;
+    height: 800px;
     display: flex;
-    border: 2px solid lime;
     flex-wrap: wrap;
+    margin: auto;
+    perspective: 1000px;
 }
 .card{
-    border: 2px solid aqua;
+    border: px solid rgb(25, 168, 37);
     width: 200px;
     height: 200px;
     position:relative;
+    transform-style: preserve-3d;
+    transition: transform.5s;
+    
+
+}
+.card.flip{
+    transform: rotateY(180deg);
 }
 
 img {
@@ -34,5 +44,11 @@ img {
 }
 
 .front, .back{
-    position:absolute;
+    position: absolute;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+.front{
+    transform: rotateY(180deg);
 }
