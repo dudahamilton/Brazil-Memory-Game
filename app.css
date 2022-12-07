@@ -15,10 +15,11 @@
 body{
     height: 100vh;
     display: flex;
+    position: relative;
 }
 .memory-game{
     width: 1200px;
-    height: 900px;
+    height: 500px;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -30,7 +31,7 @@ body{
     position:relative;
     transform-style: preserve-3d;
     transition: transform.5s;
-    margin: 10px;
+    margin: 5px;
     
 
 }
@@ -51,4 +52,10 @@ img {
 
 .front{
     transform: rotateY(180deg);
+}
+
+.restart,
+.instructions{
+    justify-content: center;
+    align-items: center;
 }
