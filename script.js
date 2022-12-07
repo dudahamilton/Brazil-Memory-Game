@@ -137,13 +137,13 @@ function resetButton(){
     document.getElementById('title').textContent = 'Memory Game'
 // .cards unflip all cards
     cards.forEach(card => card.classList.remove('flip'));
-
+// reset button is still buggy
 }
 
 /* to do:
 reset button
 instructions button
-add players and switch between them
+
 winning conditions
 track of pairs
 winning message
