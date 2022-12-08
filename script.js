@@ -92,7 +92,7 @@ instructionBtn.onclick = function (){
   //console.log('inside the function')
 }
 function startGame(){
-    timer = 10000;
+    timer = 60000;
     timeLeft = setInterval(setTimer, 1000)
      // adding event listener to every card
     cards.forEach(card => card.addEventListener('click', flipCard));
@@ -157,7 +157,7 @@ function winner (){
 function resetButton(){
 // assigning the scores back to 0
     clearInterval(timeLeft);
-    timer = 10000;
+    timer = 60000;
     timeLeft = setInterval(setTimer, 1000)
     counter = 0;
     message.textContent = 'Memory Game'
