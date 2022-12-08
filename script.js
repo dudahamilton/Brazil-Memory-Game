@@ -119,7 +119,7 @@ function setTimer() {
 	myStopFunction()
 	console.log(timer)
 	timer -= 1000
-    divTime.textContent = `You have ${timer / 1000} left`;
+    divTime.textContent = `You have ${timer / 1000} seconds left`;
 }
 //let timeLeft = setInterval(setTimer, 1000)
 function myStopFunction() {
@@ -160,12 +160,6 @@ function resetButton(){
 }
 
 /* to do:
-fix reset button
-instructions button
-start button
-
-
-
 shuffle
 add 10 more pics (maybe)
  */

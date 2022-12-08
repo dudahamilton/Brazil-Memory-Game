@@ -8,8 +8,8 @@
     <title>Brazil Memory Game</title>
 </head>
 <body>
-    <h1 id="title">Match Game</h1>
-    <div id="time"></div>
+    <h1 id="title">Brazil Memory Game</h1>
+    <div class="time" id="time"></div>
     <section class="memory-game">
         
         <div class="card" data-city="salvador">
@@ -55,10 +55,12 @@
         </div>
         
     </section>
-    <button class="restart" id="restart" onclick="">Restart</button>
-    <button class="instructions" id="instructions">Instructions</button>
-    <button class="start" id="start">Start</button>
-    <div id="instructions-div">Instructions</div>
+    <div class="buttons">
+        <button class="restart" id="restart" onclick="">Restart</button>
+        <button class="instructions" id="instructions">Instructions</button>
+        <button class="start" id="start">Start</button>
+    </div>
+    <div id="instructions-div">The game starts with 10 "squares" that shows the Brazilian map, once you click on one of the squares a picture of one of my favorites spots in Brazil will show. There will be 5 different beautiful spots total. Once you see the picture you will click on a second picture, the goal is to find the pair of the first picture you clicked on. If both of the pictures are the same you found a match, otherwise the cards will unflip after a few seconds. You have 1 minute to find all 5 pairs. This game will test your memory and hopefully will make you want to visit my country.</div>
    
     <script src="./script.js"></script>
     </body>

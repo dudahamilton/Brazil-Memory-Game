@@ -13,17 +13,18 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
-    display: flex;
-    position: relative;
+    background-color: #DAF7A6;
+    
 }
 .memory-game{
     width: 1200px;
     height: 500px;
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
+    margin: auto; 
     perspective: 1000px;
+    justify-content: center;
+    align-items: center;
 }
 .card{
     width: 200px;
@@ -52,12 +53,33 @@ img {
     transform: rotateY(180deg);
 }
 
-.restart,
-.instructions{
+ .restart,
+.instructions,
+.start{
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid #E7A0C1;
+    border-radius: 15%;
+    background-color: #E7A0C1;
+} 
+.buttons{
+    display: flex;
     justify-content: center;
-    align-items: center;
+    
+}
+h1{
+    text-align: center;
+    color: #F7741C ;
+}
+.time{
+    display:flex;
+    justify-content: center;
 }
 
 #instructions-div{
     display: none;
+    background-color: #F12383;
+    color: white;
+    margin:  20px 200px;
+    padding: 20px;
 }
