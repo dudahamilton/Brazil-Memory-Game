@@ -27,6 +27,9 @@
  // selecting every card
  const cards = document.querySelectorAll('.card');
 
+ // selecting h1
+ let message = document.getElementById('title');
+
  // adding event listener to every card
  cards.forEach(card => card.addEventListener('click', flipCard));
 
@@ -90,7 +93,7 @@ function unflipCards(){
 }
 
 // Setting timer of the game
-let timer = 5000
+let timer = 10000
 function setTimer() {
 	myStopFunction()
 	console.log(timer)
@@ -101,6 +104,7 @@ function myStopFunction() {
 	if (timer <= 0) {
 		clearInterval(timeLeft);
         cards.forEach(card => card.removeEventListener('click', flipCard));
+        message.textContent = 'You lose! Try again!'
 	} 
 }
 
@@ -113,7 +117,8 @@ function restartBoard() {
 
 function winner (){
     if(counter === 5){
-        document.getElementById('title').textContent = 'You win!!'
+        message.textContent = 'Congratulations!! You win!!'
+        clearInterval(timeLeft);
     }
 }
 
@@ -121,10 +126,10 @@ function winner (){
  // add eventListener to restart button
 function resetButton(){
 // assigning the scores back to 0
-    timer = 5000;
+    timer = 10000;
     timeLeft = setInterval(setTimer, 1000)
     counter = 0;
-    document.getElementById('title').textContent = 'Memory Game'
+    message.textContent = 'Memory Game'
 // .cards unflip all cards
     cards.forEach(card => card.classList.remove('flip'));
 // making the cards clickable again
