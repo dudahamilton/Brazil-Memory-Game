@@ -65,7 +65,7 @@
         // it's a match remove event listener
         turnCardsOff()
         counter++
-        console.log(counter)
+        //console.log(counter)
         winner()
     } else{
         // it's not a match
@@ -122,6 +122,7 @@ function winner (){
 function resetButton(){
 // assigning the scores back to 0
     timer = 5000;
+    timeLeft = setInterval(setTimer, 1000)
     counter = 0;
     document.getElementById('title').textContent = 'Memory Game'
 // .cards unflip all cards
@@ -131,17 +132,12 @@ function resetButton(){
 }
 
 /* to do:
-reset button
+fix reset button
 instructions button
+start button
 
-winning conditions
-track of pairs
-winning message
+
+
 shuffle
 add 10 more pics (maybe)
-add references to read me */
-
-/* playerOneTurn = true
-playerOneTurn= false (inside secondCard)
-if (playerOneTurn = false){
-    playerTwoTurn = true)*/
+ */
