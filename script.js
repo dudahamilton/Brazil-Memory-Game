@@ -59,20 +59,12 @@ instructionBtn.onclick = function (){
  function flipCard() {
      if(boardLock) return;
      if (this === firstCard) return; //if thr user clicks twice in the same card it will turn the eventLsitener off. this will prevent that to happen.
-
-    //console.log("I was clicked")
-   // console.log(this) refers to flipcard
     this.classList.add('flip');
     if(!cardFlipped){
-       // first time player clicked a card
        cardFlipped = true;
        firstCard = this;
-       //console.log(cardFlipped, firstCard)
 }   else {
        secondCard = this;
-       //console.log(cardFlipped, secondCard)
-       //console.log(firstCard.dataset.city);
-       //console.log(secondCard.dataset.city)
        isAMatch();
   }
   //switch player
@@ -83,13 +75,11 @@ instructionBtn.onclick = function (){
         // it's a match remove event listener
         turnCardsOff()
         counter++
-        //console.log(counter)
         winner()
     } else{
         // it's not a match
         unflipCards()
     }
-  //console.log('inside the function')
 }
 function startGame(){
     timer = 60000;
