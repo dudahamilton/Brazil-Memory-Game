@@ -96,6 +96,7 @@ function startGame(){
     timeLeft = setInterval(setTimer, 1000)
      // adding event listener to every card
     cards.forEach(card => card.addEventListener('click', flipCard));
+    shuffle();
 }
 
 function turnCardsOff(){
@@ -137,6 +138,13 @@ function restartBoard() {
     //if thr user clicks twice in the same card it will turn the eventLsitener off. this will prevent that from happening.
   }
 
+function shuffle(){
+    cards.forEach(card =>{
+        let randomPosition = Math.floor(Math.random() * 10);
+        card.style.order = randomPosition;
+    })
+}
+
 function winner (){
     if(counter === 5){
         message.textContent = 'Congratulations!! You win!!'
@@ -157,6 +165,7 @@ function resetButton(){
     cards.forEach(card => card.classList.remove('flip'));
 // making the cards clickable again
     cards.forEach(card => card.addEventListener('click', flipCard));
+    shuffle();
 }
 
 /* to do:
