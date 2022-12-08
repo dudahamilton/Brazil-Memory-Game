@@ -167,8 +167,3 @@ function resetButton(){
     cards.forEach(card => card.addEventListener('click', flipCard));
     shuffle();
 }
-
-/* to do:
-shuffle
-add 10 more pics (maybe)
- */
