@@ -29,16 +29,31 @@
 
  // selecting h1
  let message = document.getElementById('title');
-
- // adding event listener to every card
- cards.forEach(card => card.addEventListener('click', flipCard));
+ // selecting div that counts time
+ let divTime = document.getElementById('time')
 
  // selecting restart button
  const reset = document.querySelector('.restart');
  //adding event listener to restart button
  reset.addEventListener('click', resetButton);
+ // selecting start button
+ const start = document.querySelector('.start')
+ //  adding event listener to start button
+ start.addEventListener('click', startGame);
+
+ const divShows = document.getElementById('instructions-div');
+
+ const instructionBtn = document.getElementById('instructions');
+
 
 //Functions;
+instructionBtn.onclick = function (){
+    if (divShows.style.display !== "block"){
+        divShows.style.display = "block";
+    } else {
+        divShows.style.display = "none";
+    }
+}
 
 // function that flips the card once clicked
  function flipCard() {
@@ -76,6 +91,12 @@
     }
   //console.log('inside the function')
 }
+function startGame(){
+    timer = 10000;
+    timeLeft = setInterval(setTimer, 1000)
+     // adding event listener to every card
+    cards.forEach(card => card.addEventListener('click', flipCard));
+}
 
 function turnCardsOff(){
     firstCard.removeEventListener('click', flipCard);
@@ -93,13 +114,14 @@ function unflipCards(){
 }
 
 // Setting timer of the game
-let timer = 10000
+//let timer = 10000
 function setTimer() {
 	myStopFunction()
 	console.log(timer)
 	timer -= 1000
+    divTime.textContent = `You have ${timer / 1000} left`;
 }
-let timeLeft = setInterval(setTimer, 1000)
+//let timeLeft = setInterval(setTimer, 1000)
 function myStopFunction() {
 	if (timer <= 0) {
 		clearInterval(timeLeft);
@@ -126,6 +148,7 @@ function winner (){
  // add eventListener to restart button
 function resetButton(){
 // assigning the scores back to 0
+    clearInterval(timeLeft);
     timer = 10000;
     timeLeft = setInterval(setTimer, 1000)
     counter = 0;

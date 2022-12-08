@@ -57,3 +57,7 @@ img {
     justify-content: center;
     align-items: center;
 }
+
+#instructions-div{
+    display: none;
+}
