@@ -59,5 +59,8 @@ https://dudahamilton.github.io/Brazil-Memory-Game/
 
 ---
 
+### Aproach:
+I decided to start with the logic of the cards, flipping (half of it happens through CSS), checking for a match, unflipping, storing the numbers of pairs, once the card logic was done I added the time obstacle, the reset button, the start button and the instructions button. Working with CSS flexbox was challenging but rewarding, (this) was also a roadblock but after watching a few classes and youtube video I now think I master it (I hope I don't prove myself wrong in the future) and adding the timer was also challenging but it worked well in the end. Shuffling using flexbox was easier than I though it would be and unfliping the cards using a selfTimeOut was also easier than I thout it would be.
+
 ### Post project thoughts:
-I am very happy with the final results of my project, I learned a lot with it. I npw have a better understanding of the DOM, have a solid idea of what (this) means and how to apply it, learned setInterval and setTimeOut, learned to console.log properly and have a habit of commiting often which I did not have before. I will keep updating this project, but as far as right now I am very happy with the learning it provided me.
+I am very happy with the final results of my project, I learned a lot with it. I now have a better understanding of the DOM, have a solid idea of what (this) means and how to apply it, learned setInterval and setTimeOut, learned to console.log properly and have a habit of commiting often which I did not have before. I will keep updating this project, but as far as right now I am very happy with the learning it provided me.
