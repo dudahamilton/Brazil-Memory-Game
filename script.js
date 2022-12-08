@@ -45,13 +45,26 @@
 
  const instructionBtn = document.getElementById('instructions');
 
+ const startBtn = document.getElementById('start');
+
 
 //Functions;
+
+// displaying instructuions and hiding with user click
 instructionBtn.onclick = function (){
     if (divShows.style.display !== "block"){
         divShows.style.display = "block";
     } else {
         divShows.style.display = "none";
+    }
+}
+
+// start button should not appear once the game starts
+startBtn.onclick = function (){
+    if (startBtn.style.display !== 'none'){
+        startBtn.style.display = 'none';
+    } else{
+        startBtn.style.display = 'inline';
     }
 }
 

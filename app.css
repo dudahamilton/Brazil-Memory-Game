@@ -61,6 +61,7 @@ img {
     border: 1px solid #E7A0C1;
     border-radius: 15%;
     background-color: #E7A0C1;
+    color: black;
 } 
 .buttons{
     display: flex;
@@ -82,4 +83,8 @@ h1{
     color: white;
     margin:  20px 200px;
     padding: 20px;
+}
+
+#start{
+    display: inline;
 }
